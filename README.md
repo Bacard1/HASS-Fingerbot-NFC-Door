@@ -41,10 +41,10 @@ Option to add notifications or logs
 ---
 
 ## 💥 IDEA  
-Electric entrance locks in most apartment buildings are not powered with high voltage, but rather low voltage used as a signal to the electric lock to detect that someone is pressing the button from their apartment. In reality, the button just connects the wires together. I decided to **buy** a [Zigbee Fingerbot]([figerbot]) to press this button and the problem was solved… well, not quite! The **springs** used in these buttons to keep them in the "off" state are quite **stiff**, and the [Zigbee Fingerbot]([figerbot]) couldn’t handle it.  
+Electric entrance locks in most apartment buildings are not powered with high voltage, but rather low voltage used as a signal to the electric lock to detect that someone is pressing the button from their apartment. In reality, the button just connects the wires together. I decided to **buy** a [Zigbee Fingerbot][figerbot] to press this button and the problem was solved… well, not quite! The **springs** used in these buttons to keep them in the "off" state are quite **stiff**, and the [Zigbee Fingerbot][figerbot] couldn’t handle it.  
 <br>
 
-Then I realized that if the [Zigbee Fingerbot]([figerbot]) can’t press the switch, it could instead **connect the wires directly**, just like the button does. And since no live voltage flows through those wires, **an electrician isn’t needed** — I could do it myself.<br>
+Then I realized that if the [Zigbee Fingerbot][figerbot] can’t press the switch, it could instead **connect the wires directly**, just like the button does. And since no live voltage flows through those wires, **an electrician isn’t needed** — I could do it myself.<br>
 
 > [!CAUTION]  
 > Always check the wires with a multimeter for voltage!
@@ -53,10 +53,10 @@ Then I realized that if the [Zigbee Fingerbot]([figerbot]) can’t press the swi
 
 ![shema](/img/shema_HASS-Fingerbot-HFC-Door.png)
 
-| After removing the switch, I used [wire connectors](klamma) to pull out both wires next to the switch. This way, the switch remains functional and the [Zigbee Fingerbot]([figerbot]) can do its job. | ![klamma](/img/klamma.png)  |
+| After removing the switch, I used [wire connectors][klamma] to pull out both wires next to the switch. This way, the switch remains functional and the [Zigbee Fingerbot][figerbot] can do its job. | ![klamma](/img/klamma.png)  |
 |-----|-----|
 
-## ⚙️ [Zigbee Fingerbot TUYA TS0001:]([figerbot]) a good choice with all necessary options, built-in battery and Type-C charging:
+## ⚙️ [Zigbee Fingerbot TUYA TS0001:][figerbot] a good choice with all necessary options, built-in battery and Type-C charging:
 
 |![Fingerbot](/img/Fingerbot.png)|![Fingerbot option](/img/Fingerbot_option.png)|
 |-----|-----|
@@ -73,20 +73,20 @@ Then I realized that if the [Zigbee Fingerbot]([figerbot]) can’t press the swi
 | **Touch** | Enables or disables manual touch activation. |
 | **Linkquality** | Signal strength (`LQI`) — higher is better. |
 
-> Photos of the installed [Zigbee Fingerbot]([figerbot])
+> Photos of the installed [Zigbee Fingerbot][figerbot]
 
 |![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|
 |----|----|
 |![img](/img/photo003.jpg)|![img](/img/phofo004.jpg)|
 
 ## 💫 NFC  
-The most popular NFC tags compatible with nearly all devices are [ntag213](NFCtag1) and [ntag215](NFCtag2). I recommend [ntag213](NFCtag1) — it works best with my phone and the rest of my family’s devices.
+The most popular NFC tags compatible with nearly all devices are [ntag213][NFCtag1] and [ntag215][NFCtag2]. I recommend [ntag213][NFCtag1] — it works best with my phone and the rest of my family’s devices.
 
 > [!TIP]  
 > When choosing an NFC tag, make sure it is **rewritable**!
 
 ### INSTALLING NFC IN HOME ASSISTANT:  
-NFC tags are configured via a mobile device and the Home Assistant app. My device is [POCO X3 NFC PRO](poco) running [HyperOS 2](hyperos).
+NFC tags are configured via a mobile device and the Home Assistant app. My device is [POCO X3 NFC PRO][poco] running [HyperOS 2][hyperos].
 
 | From the menu, go to Settings. | Choose App Configuration. |
 |----|----|
@@ -100,7 +100,7 @@ NFC tags are configured via a mobile device and the Home Assistant app. My devic
 |----|----|
 | ![nfc](/img/nfc/nfctag5.png) | ![nfc](/img/nfc/nfctag6.png) |
 
-| Tap the 3 dots of the new tag and select “New Automation”. | Add [Zigbee Fingerbot]([figerbot]) as the action. |
+| Tap the 3 dots of the new tag and select “New Automation”. | Add [Zigbee Fingerbot][figerbot] as the action. |
 |----|----|
 | ![nfc](/img/nfc/nfctag7.png) | ![nfc](/img/nfc/nfctag8.png) |
 
@@ -129,6 +129,7 @@ mode: single
 > [!TIP]  
 > If you enjoyed this project, you can find more interesting repositories [HERE](https://github.com/Bacard1?tab=repositories).  
 > If you need help or have any questions, feel free to contact me.
+
 
 [hyperos]: https://www.mi.com/de/product/poco-x3-pro?srsltid=AfmBOoqKmKAtF-_P0cmo5_mUh5KyV_rqULEeFMbqT99BiuWWyo8BDJRW
 [poco]: https://www.mi.com/de/product/poco-x3-pro?srsltid=AfmBOoqKmKAtF-_P0cmo5_mUh5KyV_rqULEeFMbqT99BiuWWyo8BDJRW

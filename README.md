@@ -110,19 +110,19 @@ alias: Tag tag opening door b2a06299-1e6a-4ae1-8d6c-ac50d26f3d67 has been scanne
 description: ""
 triggers:
   - trigger: tag
-	tag_id: 8b3a2946-73d2-4f74-9933-b7299f2abfa1
+    tag_id: 8b3a2946-73d2-4f74-9933-b7299f2abfa1
 conditions: []
 actions:
   - action: switch.turn_on
-	metadata: {}
-	data: {}
-	target:
-	  entity_id: switch.fingerrobot_001
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.fingerrobot_001
   - action: notify.user
-	metadata: {}
-	data:
-	  title: Home Assistant Information!
-	  message: Home Assistant Unlock the front door!
+    metadata: {}
+    data:
+      title: Home Assistant Information!
+      message: Home Assistant Unlock the front door!
 mode: single
 ```
 

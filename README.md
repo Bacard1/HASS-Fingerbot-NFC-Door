@@ -1,116 +1,134 @@
+
 ![BANNER](/img/banner_HASS-Fingerbot-NFC-Door.png)
-# 🖲️ УПРАВЛЕНИЕ НА ZIGBEE FIGERBOT ЧРЕЗ NFC И HOME ASSISTANT
-[![PayPal дарение](https://img.shields.io/badge/PayPal-Дари-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
-![Скрипт](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
-[![English](https://img.shields.io/badge/ENGLICH-language-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/en)](README.md)
+# 🖲️ ZIGBEE FINGERBOT CONTROL VIA NFC AND HOME ASSISTANT
+[![PayPal Donation](https://img.shields.io/badge/PayPal-Дари-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
+![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
+[![БЪЛГАРСКИ](https://img.shields.io/badge/БЪЛГАРСКИ-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/en)](BG.md)
 
-> Автоматизирай входа на сградата с Home Assistant, Zigbee2MQTT и NFC!
+> Automate your building entrance with Home Assistant, Zigbee2MQTT and NFC!
 
-Този проект показва как да управляваш Zigbee Fingerbot чрез автоматизация в Home Assistant, задействана от NFC таг, поставен до входната врата на сградата. При сканиране на тага (напр. със смартфон), Fingerbot се активира и натиска физически бутон — например този за домофон или отключване.
+This project demonstrates how to control a Zigbee Fingerbot via automation in Home Assistant, triggered by an NFC tag placed near the building's main entrance. When the tag is scanned (e.g., with a smartphone), the Fingerbot activates and presses a physical button — such as one for the intercom or door unlocking.
 
-🔧 Използвани технологии<br>
+🔧 Technologies used<br>
 🏠 Home Assistant<br>
 📶 Zigbee2MQTT<br>
 🤖 Zigbee Fingerbot<br>
-📱 NFC таг (съвместим с Android/iOS)<br>
-⚙️ MQTT автоматизации
+📱 NFC tag (compatible with Android/iOS)<br>
+⚙️ MQTT automations
 
-✅ Приложения
-Отключване на входна врата чрез сканиране<br>
-Симулиране на натискане на бутон с роботизирана ръка<br>
-Безконтактен достъп до сграда без физически ключ<br>
+✅ Use Cases  
+Unlock the main entrance by scanning<br>
+Simulate a button press with a robotic arm<br>
+Contactless access without physical keys
 
-🚀 Предимства
-Напълно локална и офлайн работа<br>
-Бърза реакция при NFC сканиране (около 1 секунда)<br>
-Лесно персонализируем YAML код<br>
-Възможност за добавяне на известия или логове
+🚀 Benefits  
+Fully local and offline operation<br>
+Fast NFC scan response (around 1 second)<br>
+Easily customizable YAML code<br>
+Option to add notifications or logs
 
 ---
 
-## 📦 СЪДЪРЖАНИЕ
+## 📦 CONTENT
 
-- [🖲️ УПРАВЛЕНИЕ НА ZIGBEE FIGERBOT ЧРЕЗ NFC И HOME ASSISTANT](#️-управление-на-zigbee-figerbot-чрез-nfc-и-home-assistant)
-	- [📦 СЪДЪРЖАНИЕ](#-съдържание)
-	- [💥 ИДЕЯ](#-идея)
-	- [⚙️ Zigbee Fingerbot TUYA TS0001: е добър избор със всички опции необходими за това устройство и е с вградена батерия и зарядно с TYP C:](#️-zigbee-fingerbot-tuya-ts0001-е-добър-избор-със-всички-опции-необходими-за-това-устройство-и-е-с-вградена-батерия-и-зарядно-с-typ-c)
+- [🖲️ ZIGBEE FINGERBOT CONTROL VIA NFC AND HOME ASSISTANT](#️-zigbee-fingerbot-control-via-nfc-and-home-assistant)
+	- [📦 CONTENT](#-content)
+	- [💥 IDEA](#-idea)
+	- [⚙️ Zigbee Fingerbot TUYA TS0001: a good choice with all necessary options, built-in battery and Type-C charging:](#️-zigbee-fingerbot-tuya-ts0001-a-good-choice-with-all-necessary-options-built-in-battery-and-type-c-charging)
 	- [💫 NFC](#-nfc)
-		- [ИНСТАЛИРАНЕ НА NFC В HOME ASSISTANT:](#инсталиране-на-nfc-в-home-assistant)
+		- [INSTALLING NFC IN HOME ASSISTANT:](#installing-nfc-in-home-assistant)
 
 ---
 
-## 💥 ИДЕЯ
-Електрическите входни брави на повечето градски згради не се оправляват с високо напрежение, а напротив с ниско напрежение което служи за сигнал на електрическата брава за да разбере че някои натиска бутонът в домът си. Всъщност той просто допира кабелите един в друг. Реших да захупя [Zigbee Fingerbot]([figerbot]) който да натиска този бутон и проблемът беше решен, да ама не! Прожините който се слагат на тези ключове за да са винаги в изглючено състояние без натиск са доста корави и [Zigbee Fingerbot]([figerbot]) не успя да се справи!
+## 💥 IDEA  
+Electric entrance locks in most apartment buildings are not powered with high voltage, but rather low voltage used as a signal to the electric lock to detect that someone is pressing the button from their apartment. In reality, the button just connects the wires together. I decided to **buy** a [Zigbee Fingerbot](figerbot) to press this button and the problem was solved… well, not quite! The **springs** used in these buttons to keep them in the "off" state are quite **stiff**, and the [Zigbee Fingerbot](figerbot) couldn’t handle it.  
 <br>
 
-Замислих се че след като [Zigbee Fingerbot]([figerbot]) не може да натисне ключът той ще допира кабелите един в друг, точно така както прави и ключът Ви, а по кабелите не тече ток, така че няма да е необходим ел. техник и ще се справя и сам.<br>
+Then I realized that if the [Zigbee Fingerbot](figerbot) can’t press the switch, it could instead **connect the wires directly**, just like the button does. And since no live voltage flows through those wires, **an electrician isn’t needed** — I could do it myself.<br>
 
-> [!CAUTION]
-> Въпреки това винаги проверявайте кабелите с мултицет за напрежение!
+> [!CAUTION]  
+> Always check the wires with a multimeter for voltage!
 
-> Изработих примерна схема за ди си представите какъв трябва да е резултатът:
+> I created a sample diagram to help visualize the intended result:
 
 ![shema](/img/shema_HASS-Fingerbot-HFC-Door.png)
 
-| След демонтаца на ключът използвах такива [кабелни съединители]([[klamma]]) за да извадя и двата кабела в страни от ключът. Така ключът остава функционален и [Zigbee Fingerbot]([figerbot]) ще работи. | ![klamma](/img/klamma.png)  |
+| After removing the switch, I used [wire connectors](klamma) to pull out both wires next to the switch. This way, the switch remains functional and the [Zigbee Fingerbot](figerbot) can do its job. | ![klamma](/img/klamma.png)  |
 |-----|-----|
 
-## ⚙️ [Zigbee Fingerbot TUYA TS0001:]([figerbot]) е добър избор със всички опции необходими за това устройство и е с вградена батерия и зарядно с TYP C:
+## ⚙️ [Zigbee Fingerbot TUYA TS0001:](figerbot) a good choice with all necessary options, built-in battery and Type-C charging:
 
 |![Fingerbot](/img/Fingerbot.png)|![Fingerbot option](/img/Fingerbot_option.png)|
 |-----|-----|
 
+| **Option** | **Description** |
+|-----------|-----------------|
+| **State** | `ON`/`OFF` state — triggers or deactivates button press. |
+| **Battery** | Remaining battery percentage. Can take up to 24 hours to update. |
+| **Mode** | Operating mode:<br>• `Click` – short press<br>• `Switch` – toggle on/off<br>• `Program` – custom behavior (depends on firmware). |
+| **Lower** | Down movement limit – how far the arm moves down (in %). |
+| **Upper** | Up movement limit – how far the arm retracts (in %). |
+| **Delay** | How long the arm holds the button (in seconds). |
+| **Reverse** | Reverses motor direction (useful when mounted upside down). |
+| **Touch** | Enables or disables manual touch activation. |
+| **Linkquality** | Signal strength (`LQI`) — higher is better. |
 
-| **Опция** | **Описание** |
-| ----- | ---- |
-| **State** | Състояние `ON`/`OFF` — активира или деактивира натискането на бутона.|
-| **Battery** | Остатъчен заряд на батерията в проценти (`%`). Обновяването може да отнеме до 24 часа. |
-| **Mode** | Работен режим – определя поведението на Fingerbot:<br>• `Click` – Кратко натискане<br>• `Switch` – Превключване между натиснато и освободено<br>• `Program` – Персонализирано поведение (зависи от фърмуера). |
-| **Lower** | **Долен лимит на движение** – задава колко надолу се движи рамото при натискане (в %). |
-| **Upper** | **Горен лимит на движение** – задава колко се прибира рамото след натискане (в %). |
-| **Delay** | **Задържане** – колко време рамото задържа бутона натиснат (в секунди). |
-| **Reverse** | Ако е включено, **обръща посоката на движение на мотора** (полезно при обърнат монтаж). |
-| **Touch** | Включва или изключва **ръчно активиране чрез докосване** на самото устройство. |
-| **Linkquality** | Качество на сигнала (`LQI`) – по-висока стойност означава по-добра Zigbee връзка.|
+> Photos of the installed [Zigbee Fingerbot](figerbot)
 
-> Снимки на монтираният вече [Zigbee Fingerbot]([figerbot])
-> 
 |![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|
 |----|----|
 |![img](/img/photo003.jpg)|![img](/img/phofo004.jpg)|
 
+## 💫 NFC  
+The most popular NFC tags compatible with nearly all devices are [ntag213](NFCtag1) and [ntag215](NFCtag2). I recommend [ntag213](NFCtag1) — it works best with my phone and the rest of my family’s devices.
 
-## 💫 NFC
-Най-пополярните NFCtag съвместими с почти всички устройства са [ntag213]([NFCtag1]) [ntag215]([NFCtag2]), аз предпоръчвам [ntag213]([NFCtag1]) моят телефон работи по добре с него, а и на останалите от семейството.
+> [!TIP]  
+> When choosing an NFC tag, make sure it is **rewritable**!
 
-> [!TIP]
-> При избор на NFCtag се уверете че закупувате презаписващи тагове!!!
+### INSTALLING NFC IN HOME ASSISTANT:  
+NFC tags are configured via a mobile device and the Home Assistant app. My device is [POCO X3 NFC PRO](poco) running [HyperOS 2](hyperos).
 
-### ИНСТАЛИРАНЕ НА NFC В HOME ASSISTANT:
-NFCtag се инсталира през мобилно устройство и приложението на Home Assistant, моето устройсво е [POCO X3 NFC PRO]([poco]) с инсталиран [HyperOS2]([hyperos])
-
-|От менюто изберете настройки.|Изберете опциите на приложението.|
+| From the menu, go to Settings. | Choose App Configuration. |
 |----|----|
-|![nfc](/img/nfc/nfctag1.png)|![nfc](/img/nfc/nfctag2.png)|
+| ![nfc](/img/nfc/nfctag1.png) | ![nfc](/img/nfc/nfctag2.png) |
 
-|Вървете на NFCtag.|След като сканирате тага изберете създаване на евент.|
+| Go to NFC Tags. | After scanning, choose Create Event. |
 |----|----|
-|![nfc](/img/nfc/nfctag3.png)|![nfc](/img/nfc/nfctag4.png)|
+| ![nfc](/img/nfc/nfctag3.png) | ![nfc](/img/nfc/nfctag4.png) |
 
-|||
+| In HASS main menu, go to Tags. | You will see the new tag by the scanned ID. |
 |----|----|
-|![nfc](/img/nfc/nfctag5.png)|![nfc](/img/nfc/nfctag6.png)|
+| ![nfc](/img/nfc/nfctag5.png) | ![nfc](/img/nfc/nfctag6.png) |
 
-|От главното меню на HASS вържете на тагове.|Там ще видите новият таг, ще го познаете по ИД-то което видяхме при сканирането.|
-
-|Изберете трите точки в горният край на новият таг и изберете "Нова Автоматизация".| Добавете [Zigbee Fingerbot]([figerbot])|
+| Tap the 3 dots of the new tag and select “New Automation”. | Add [Zigbee Fingerbot](figerbot) as the action. |
 |----|----|
-|![nfc](/img/nfc/nfctag7.png)|![nfc](/img/nfc/nfctag8.png)|
+| ![nfc](/img/nfc/nfctag7.png) | ![nfc](/img/nfc/nfctag8.png) |
 
+> AUTOMATION YAML CODE:
+```yaml
+alias: Tag tag opening door b2a06299-1e6a-4ae1-8d6c-ac50d26f3d67 has been scanned
+description: ""
+triggers:
+  - trigger: tag
+	tag_id: 8b3a2946-73d2-4f74-9933-b7299f2abfa1
+conditions: []
+actions:
+  - action: switch.turn_on
+	metadata: {}
+	data: {}
+	target:
+	  entity_id: switch.fingerrobot_001
+  - action: notify.user
+	metadata: {}
+	data:
+	  title: Home Assistant Information!
+	  message: Home Assistant Unlock the front door!
+mode: single
+```
 
-> [!TIP]
-> Ако този проект ви е харесъл, [ТУК](https://github.com/Bacard1?tab=repositories) ще намерите още интересни гранилища направени от мен.<br>
-> Ако срещате затруднения или имате въпроси не се колебайте да се свържете с мен.
+> [!TIP]  
+> If you enjoyed this project, you can find more interesting repositories [HERE](https://github.com/Bacard1?tab=repositories).  
+> If you need help or have any questions, feel free to contact me.
 
 [hyperos]: https://www.mi.com/de/product/poco-x3-pro?srsltid=AfmBOoqKmKAtF-_P0cmo5_mUh5KyV_rqULEeFMbqT99BiuWWyo8BDJRW
 [poco]: https://www.mi.com/de/product/poco-x3-pro?srsltid=AfmBOoqKmKAtF-_P0cmo5_mUh5KyV_rqULEeFMbqT99BiuWWyo8BDJRW

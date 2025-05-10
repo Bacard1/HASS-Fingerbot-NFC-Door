@@ -30,7 +30,7 @@
 
 ## 📦 СЪДЪРЖАНИЕ
 
-- [🖲️ УПРАВЛЕНИЕ НА ZIGBEE \[FIGERBOT\] ЧРЕЗ NFC И HOME ASSISTANT](#️-управление-на-zigbee-figerbot-чрез-nfc-и-home-assistant)
+- [🖲️ УПРАВЛЕНИЕ НА ZIGBEE FIGERBOT ЧРЕЗ NFC И HOME ASSISTANT](#️-управление-на-zigbee-figerbot-чрез-nfc-и-home-assistant)
   - [📦 СЪДЪРЖАНИЕ](#-съдържание)
   - [💥 ИДЕЯ](#-идея)
   - [⚙️ Zigbee Fingerbot TUYA TS0001: е добър избор със всички опции необходими за това устройство и е с вградена батерия и зарядно с TYP C:](#️-zigbee-fingerbot-tuya-ts0001-е-добър-избор-със-всички-опции-необходими-за-това-устройство-и-е-с-вградена-батерия-и-зарядно-с-typ-c)
@@ -135,6 +135,6 @@ mode: single
 [hyperos]: https://www.mi.com/de/product/poco-x3-pro?srsltid=AfmBOoqKmKAtF-_P0cmo5_mUh5KyV_rqULEeFMbqT99BiuWWyo8BDJRW
 [poco]: https://www.mi.com/de/product/poco-x3-pro?srsltid=AfmBOoqKmKAtF-_P0cmo5_mUh5KyV_rqULEeFMbqT99BiuWWyo8BDJRW
 [klamma]: https://de.aliexpress.com/item/1005005805414976.html?spm=a2g0o.order_list.order_list_main.212.21c85c5f8qzzfj&gatewayAdapt=glo2deu
-[[figerbot]]: https://de.aliexpress.com/item/1005008341830865.html?spm=a2g0o.order_list.order_list_main.363.21c85c5f8qzzfj&gatewayAdapt=glo2deu
+[figerbot]: https://de.aliexpress.com/item/1005008341830865.html?spm=a2g0o.order_list.order_list_main.363.21c85c5f8qzzfj&gatewayAdapt=glo2deu
 [NFCtag1]: https://de.aliexpress.com/item/1005007613908773.html?spm=a2g0o.order_list.order_list_main.394.21c85c5f8qzzfj&gatewayAdapt=glo2deu
 [NFCtag2]: https://de.aliexpress.com/item/1005006332360160.html?spm=a2g0o.order_list.order_list_main.217.21c85c5f8qzzfj&gatewayAdapt=glo2deu

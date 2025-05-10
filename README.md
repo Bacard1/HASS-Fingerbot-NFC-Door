@@ -1,18 +1,18 @@
 
 ![BANNER](/img/banner_HASS-Fingerbot-NFC-Door.png)
-# 🖲️ [Zigbee Fingerbot]([figerbot]) CONTROL VIA NFC AND HOME ASSISTANT
+# 🖲️ ZIGBEE FINGERBOT CONTROL VIA NFC AND HOME ASSISTANT
 [![PayPal Donation](https://img.shields.io/badge/PayPal-Дари-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
 [![БЪЛГАРСКИ](https://img.shields.io/badge/БЪЛГАРСКИ-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/en)](BG.md)
 
 > Automate your building entrance with Home Assistant, Zigbee2MQTT and NFC!
 
-This project demonstrates how to control a [Zigbee Fingerbot]([figerbot]) via automation in Home Assistant, triggered by an NFC tag placed near the building's main entrance. When the tag is scanned (e.g., with a smartphone), the Fingerbot activates and presses a physical button — such as one for the intercom or door unlocking.
+This project demonstrates how to control a Zigbee Fingerbot via automation in Home Assistant, triggered by an NFC tag placed near the building's main entrance. When the tag is scanned (e.g., with a smartphone), the Fingerbot activates and presses a physical button — such as one for the intercom or door unlocking.
 
 🔧 Technologies used<br>
 🏠 Home Assistant<br>
 📶 Zigbee2MQTT<br>
-🤖 [Zigbee Fingerbot]([figerbot])<br>
+🤖 Zigbee Fingerbot<br>
 📱 NFC tag (compatible with Android/iOS)<br>
 ⚙️ MQTT automations
 
@@ -31,20 +31,20 @@ Option to add notifications or logs
 
 ## 📦 CONTENT
 
-- [🖲️ [Zigbee Fingerbot]([figerbot]) CONTROL VIA NFC AND HOME ASSISTANT](#️-zigbee-fingerbot-control-via-nfc-and-home-assistant)
+- [🖲️ ZIGBEE FINGERBOT CONTROL VIA NFC AND HOME ASSISTANT](#️-zigbee-fingerbot-control-via-nfc-and-home-assistant)
 	- [📦 CONTENT](#-content)
 	- [💥 IDEA](#-idea)
-	- [⚙️ [Zigbee Fingerbot]([figerbot]) TUYA TS0001: a good choice with all necessary options, built-in battery and Type-C charging:](#️-zigbee-fingerbot-tuya-ts0001-a-good-choice-with-all-necessary-options-built-in-battery-and-type-c-charging)
+	- [⚙️ Zigbee Fingerbot TUYA TS0001: a good choice with all necessary options, built-in battery and Type-C charging:](#️-zigbee-fingerbot-tuya-ts0001-a-good-choice-with-all-necessary-options-built-in-battery-and-type-c-charging)
 	- [💫 NFC](#-nfc)
 		- [INSTALLING NFC IN HOME ASSISTANT:](#installing-nfc-in-home-assistant)
 
 ---
 
 ## 💥 IDEA  
-Electric entrance locks in most apartment buildings are not powered with high voltage, but rather low voltage used as a signal to the electric lock to detect that someone is pressing the button from their apartment. In reality, the button just connects the wires together. I decided to **buy** a [[Zigbee Fingerbot]([figerbot])](figerbot) to press this button and the problem was solved… well, not quite! The **springs** used in these buttons to keep them in the "off" state are quite **stiff**, and the [[Zigbee Fingerbot]([figerbot])](figerbot) couldn’t handle it.  
+Electric entrance locks in most apartment buildings are not powered with high voltage, but rather low voltage used as a signal to the electric lock to detect that someone is pressing the button from their apartment. In reality, the button just connects the wires together. I decided to **buy** a [Zigbee Fingerbot]([figerbot]) to press this button and the problem was solved… well, not quite! The **springs** used in these buttons to keep them in the "off" state are quite **stiff**, and the [Zigbee Fingerbot]([figerbot]) couldn’t handle it.  
 <br>
 
-Then I realized that if the [[Zigbee Fingerbot]([figerbot])](figerbot) can’t press the switch, it could instead **connect the wires directly**, just like the button does. And since no live voltage flows through those wires, **an electrician isn’t needed** — I could do it myself.<br>
+Then I realized that if the [Zigbee Fingerbot]([figerbot]) can’t press the switch, it could instead **connect the wires directly**, just like the button does. And since no live voltage flows through those wires, **an electrician isn’t needed** — I could do it myself.<br>
 
 > [!CAUTION]  
 > Always check the wires with a multimeter for voltage!
@@ -53,10 +53,10 @@ Then I realized that if the [[Zigbee Fingerbot]([figerbot])](figerbot) can’t p
 
 ![shema](/img/shema_HASS-Fingerbot-HFC-Door.png)
 
-| After removing the switch, I used [wire connectors](klamma) to pull out both wires next to the switch. This way, the switch remains functional and the [[Zigbee Fingerbot]([figerbot])](figerbot) can do its job. | ![klamma](/img/klamma.png)  |
+| After removing the switch, I used [wire connectors](klamma) to pull out both wires next to the switch. This way, the switch remains functional and the [Zigbee Fingerbot]([figerbot]) can do its job. | ![klamma](/img/klamma.png)  |
 |-----|-----|
 
-## ⚙️ [[Zigbee Fingerbot]([figerbot]) TUYA TS0001:](figerbot) a good choice with all necessary options, built-in battery and Type-C charging:
+## ⚙️ [Zigbee Fingerbot TUYA TS0001:]([figerbot]) a good choice with all necessary options, built-in battery and Type-C charging:
 
 |![Fingerbot](/img/Fingerbot.png)|![Fingerbot option](/img/Fingerbot_option.png)|
 |-----|-----|
@@ -73,7 +73,7 @@ Then I realized that if the [[Zigbee Fingerbot]([figerbot])](figerbot) can’t p
 | **Touch** | Enables or disables manual touch activation. |
 | **Linkquality** | Signal strength (`LQI`) — higher is better. |
 
-> Photos of the installed [[Zigbee Fingerbot]([figerbot])](figerbot)
+> Photos of the installed [Zigbee Fingerbot]([figerbot])
 
 |![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|
 |----|----|
@@ -100,7 +100,7 @@ NFC tags are configured via a mobile device and the Home Assistant app. My devic
 |----|----|
 | ![nfc](/img/nfc/nfctag5.png) | ![nfc](/img/nfc/nfctag6.png) |
 
-| Tap the 3 dots of the new tag and select “New Automation”. | Add [[Zigbee Fingerbot]([figerbot])](figerbot) as the action. |
+| Tap the 3 dots of the new tag and select “New Automation”. | Add [Zigbee Fingerbot]([figerbot]) as the action. |
 |----|----|
 | ![nfc](/img/nfc/nfctag7.png) | ![nfc](/img/nfc/nfctag8.png) |
 

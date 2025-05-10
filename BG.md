@@ -76,9 +76,8 @@
 > Снимки на монтираният вече [Zigbee Fingerbot][figerbot]
 
 > 
-|![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|
-|----|----|
-|![img](/img/photo003.jpg)|![img](/img/phofo004.jpg)|
+|![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|![img](/img/photo003.jpg)|![img](/img/phofo004.jpg)|
+|----|----|----|----|
 
 
 ## 💫 NFC  

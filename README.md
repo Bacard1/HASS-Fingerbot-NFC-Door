@@ -75,9 +75,8 @@ Then I realized that if the [Zigbee Fingerbot][figerbot] can’t press the switc
 
 > Photos of the installed [Zigbee Fingerbot][figerbot]
 
-|![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|
-|----|----|
-|![img](/img/photo003.jpg)|![img](/img/phofo004.jpg)|
+|![img](/img/photo001.jpg)|![img](/img/photo002.jpg)|![img](/img/photo003.jpg)|![img](/img/phofo004.jpg)|
+|----|----|----|----|
 
 ## 💫 NFC  
 The most popular NFC tags compatible with nearly all devices are [ntag213][NFCtag1] and [ntag215][NFCtag2]. I recommend [ntag213][NFCtag1] — it works best with my phone and the rest of my family’s devices.

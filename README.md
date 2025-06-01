@@ -1,9 +1,13 @@
 
 ![BANNER](/img/banner_HASS-Fingerbot-NFC-Door.png)
 # 🖲️ ZIGBEE FINGERBOT CONTROL VIA NFC AND HOME ASSISTANT
-[![PayPal Donation](https://img.shields.io/badge/PayPal-Дари-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
+[![Home Assistant](https://img.shields.io/badge/🏠_Home_Assistant-41BDF5?logo=homeassistant)](https://www.home-assistant.io/) [![Donate via PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
-[![БЪЛГАРСКИ](https://img.shields.io/badge/БЪЛГАРСКИ-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/en)](BG.md)
+[![Български](https://img.shields.io/badge/BG_Български-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
+)](BG.md)
+[![Deutch](https://img.shields.io/badge/DE_Deutsche-sprache-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
+)](DE.md)
+[![English](https://img.shields.io/badge/EN_English-language-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg)](README.md)
 
 > Automate your building entrance with Home Assistant, Zigbee2MQTT and NFC!
 
@@ -32,11 +36,11 @@ Option to add notifications or logs
 ## 📦 CONTENT
 
 - [🖲️ ZIGBEE FINGERBOT CONTROL VIA NFC AND HOME ASSISTANT](#️-zigbee-fingerbot-control-via-nfc-and-home-assistant)
-	- [📦 CONTENT](#-content)
-	- [💥 IDEA](#-idea)
-	- [⚙️ Zigbee Fingerbot TUYA TS0001: a good choice with all necessary options, built-in battery and Type-C charging:](#️-zigbee-fingerbot-tuya-ts0001-a-good-choice-with-all-necessary-options-built-in-battery-and-type-c-charging)
-	- [💫 NFC](#-nfc)
-		- [INSTALLING NFC IN HOME ASSISTANT:](#installing-nfc-in-home-assistant)
+  - [📦 CONTENT](#-content)
+  - [💥 IDEA](#-idea)
+  - [⚙️ Zigbee Fingerbot TUYA TS0001: a good choice with all necessary options, built-in battery and Type-C charging:](#️-zigbee-fingerbot-tuya-ts0001-a-good-choice-with-all-necessary-options-built-in-battery-and-type-c-charging)
+  - [💫 NFC](#-nfc)
+    - [INSTALLING NFC IN HOME ASSISTANT:](#installing-nfc-in-home-assistant)
 
 ---
 
